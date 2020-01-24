@@ -4,7 +4,7 @@ This is the SEM Module coursework for Group 6.  This module was run at Edinburgh
 - Wez Young (40402601)
 - Lewis Kaye (40397385)
 - Struan Clyne (40318347)
-- Nathan Glancy (tbc)
+- Nathan Glancy (40401543)
 
 
 # Code of Conduct
