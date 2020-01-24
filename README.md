@@ -87,9 +87,9 @@ Created and maintained by Lewis Kaye
    </td>
    <td>High
    </td>
-   <td>
+   <td> 24/01/20
    </td>
-   <td>
+   <td> Struan Clyne
    </td>
   </tr>
   <tr>
@@ -147,9 +147,9 @@ Created and maintained by Lewis Kaye
    </td>
    <td>Low
    </td>
-   <td>
-   </td>
-   <td>
+   <td> 24/01/20
+   </td/>
+   <td> Lewis Kaye & Struan Clyne
    </td>
   </tr>
   <tr>
