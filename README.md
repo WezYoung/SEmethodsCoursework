@@ -181,3 +181,103 @@ Created and maintained by Lewis Kaye
   -->
   
 </table>  
+
+## Sprint 2
+<table>  
+<tr>
+   <td><strong>Task</strong>
+   </td>
+   <td><strong>Due Date</strong>
+   </td>
+   <td><strong>Priority</strong>
+   </td>
+   <td><strong>Completed Date</strong>
+   </td>
+   <td><strong>Assigned To</strong>
+   </td>
+  </tr>
+<tr>
+   <td>Use Issues on GitHub
+   </td>
+   <td>17/02/20
+   </td>
+   <td>High
+   </td>
+   <td> 
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+  <td>Design tasks as user stories
+  </td>
+  <td>17/02/20
+  </td>
+  <td>Medium
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
+  <tr>
+ <td>Integrate Project with Zube.io
+ </td>
+ <td>17/02/20
+ </td>
+ <td>Medium
+ </td>
+ <td>
+ </td>
+ <td>
+ </td>
+</tr>
+  <tr>
+  <td>Use Kanban/Project Board
+  </td>
+  <td>17/02/20
+  </td>
+  <td>Medium
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
+  <tr>
+  <td>Use Sprint Boards
+  </td>
+  <td>17/02/20
+  </td>
+  <td>Medium
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
+  <tr>
+  <td>Define full use cases
+  </td>
+  <td>17/02/20
+  </td>
+  <td>Medium
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
+  <tr>
+  <td>Create use-case diagram
+  </td>
+  <td>17/02/20
+  </td>
+  <td>Medium
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
+</table>  
