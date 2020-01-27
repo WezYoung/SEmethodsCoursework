@@ -288,7 +288,7 @@ Created and maintained by Lewis Kaye
 
 # Contributions
 <table>
-<tr>**Matriculation No.**</td>
+<tr>**Matriculation No.**</tr>
    <td>**Code Review 1**
 
    </td>
