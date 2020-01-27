@@ -16,6 +16,9 @@ Below is the group's ''Code of Conduct', as aggreed during the first meeting of 
 5.  All voices and opinions within the group are **equal**
 6.  Operate **Paperless** unless vital for working efficiently
 
+# Build Status
+Master Build Status [![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=master)](https://travis-ci.org/WezYoung/SEmethodsCoursework)
+
 # Product Backlog
 Created and maintained by Lewis Kaye
 ## Sprint 1
