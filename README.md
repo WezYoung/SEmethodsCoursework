@@ -288,6 +288,37 @@ Created and maintained by Lewis Kaye
 
 # Contributions
 <table>
+<tr>
+   <td><strong>Matriculation Number</strong>
+   </td>
+   <td><strong>Code Review 1</strong>
+   </td>
+   <td><strong>Code Review 2</strong>
+   </td>
+   <td><strong>Code Review 3</strong>
+   </td>
+   <td><strong>Code Review 4</strong>
+   </td>
+   <td><strong>Final Submisison</strong>
+   </td>
+  </tr>
+  
+  <td>Use Kanban/Project Board
+    </td>
+    <td>17/02/20
+    </td>
+    <td>Medium
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    </tr>
+</table>
+
+<table>
 <tr>**Matriculation No.**</tr>
    <td>**Code Review 1**
 
