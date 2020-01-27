@@ -288,7 +288,7 @@ Created and maintained by Lewis Kaye
 
 # Contributions
 <table>
-<tr>
+   <tr>
    <td><strong>Matriculation Number</strong>
    </td>
    <td><strong>Code Review 1</strong>
@@ -303,9 +303,10 @@ Created and maintained by Lewis Kaye
    </td>
   </tr>
   
-  <td>Use Kanban/Project Board
+  <tr>
+    <td>40402601
     </td>
-    <td>17/02/20
+    <td>25%
     </td>
     <td>Medium
     </td>
@@ -315,106 +316,52 @@ Created and maintained by Lewis Kaye
     </td>
     <td>
     </td>
-    </tr>
+  </tr>
+    
+  <tr>
+    <td>40397385
+    </td>
+    <td>25%
+    </td>
+    <td>Medium
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+    
+  <tr>
+    <td>40318347
+    </td>
+    <td>25%
+    </td>
+    <td>Medium
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+      
+  <tr>
+      <td>40401543
+      </td>
+      <td>25%
+      </td>
+      <td>Medium
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+  </tr>
+   
 </table>
 
-<table>
-<tr>**Matriculation No.**</tr>
-   <td>**Code Review 1**
-
-   </td>
-   <td>**Code Review 2**
-
-   </td>
-   <td>**Code Review 3**
-
-   </td>
-   <td>**Code Review 4**
-
-   </td>
-   <td>**Final Submission**
-
-   </td>
-  <tr>
-   <td>40402601
-
-   </td>
-   <td>25%
-
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>40397385
-
-   </td>
-   <td>25%
-
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>40318347
-
-   </td>
-   <td>25%
-
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>40401543
-
-   </td>
-   <td>25%
-
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>**Total**
-
-   </td>
-   <td><p style="text-align: right">
-100%</p>
-
-
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-</table>
