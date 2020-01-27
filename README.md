@@ -308,7 +308,7 @@ Created and maintained by Lewis Kaye
     </td>
     <td>25%
     </td>
-    <td>Medium
+    <td>
     </td>
     <td>
     </td>
@@ -323,7 +323,7 @@ Created and maintained by Lewis Kaye
     </td>
     <td>25%
     </td>
-    <td>Medium
+    <td>
     </td>
     <td>
     </td>
@@ -338,7 +338,7 @@ Created and maintained by Lewis Kaye
     </td>
     <td>25%
     </td>
-    <td>Medium
+    <td>
     </td>
     <td>
     </td>
@@ -353,7 +353,7 @@ Created and maintained by Lewis Kaye
       </td>
       <td>25%
       </td>
-      <td>Medium
+      <td>
       </td>
       <td>
       </td>
