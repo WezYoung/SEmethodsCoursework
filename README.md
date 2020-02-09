@@ -17,8 +17,13 @@ Below is the group's ''Code of Conduct', as aggreed during the first meeting of 
 6.  Operate **Paperless** unless vital for working efficiently
 
 # Build Status
-Master Build Status [![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=master)](https://travis-ci.org/WezYoung/SEmethodsCoursework)
+-Master Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=master)
 
+-Develop Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=develop)
+
+-License ![LICENSE](https://img.shields.io/github/license/WezYoung/SEmethodsCoursework.svg?style=flat-square)
+
+-Release ![Releases](https://img.shields.io/github/release/WezYoung/SEmethodsCoursework/all.svg?style=flat-square)
 # Product Backlog
 Created and maintained by Lewis Kaye
 ## Sprint 1
