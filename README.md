@@ -23,7 +23,7 @@ Below is the group's ''Code of Conduct', as aggreed during the first meeting of 
 
 -Release Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=release)
 
--Feature Branches Build Status:
+-Feature Branches Build Status::
 
 ::database ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=feature/database)
 
