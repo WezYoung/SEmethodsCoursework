@@ -21,6 +21,14 @@ Below is the group's ''Code of Conduct', as aggreed during the first meeting of 
 
 -Develop Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=develop)
 
+-Release Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=release)
+
+-Feature Branches Build Status:
+
+::database ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=feature/database)
+
+::sql-statements ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=feature/sql-statements)
+
 -License ![LICENSE](https://img.shields.io/github/license/WezYoung/SEmethodsCoursework.svg?style=flat-square)
 
 -Release ![Releases](https://img.shields.io/github/release/WezYoung/SEmethodsCoursework/all.svg?style=flat-square)
