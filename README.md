@@ -8,7 +8,7 @@ This is the SEM Module coursework for Group 6.  This module was run at Edinburgh
 
 
 # Code of Conduct
-Below is the group's ''Code of Conduct', as aggreed during the first meeting of Sprint 1, dated 17/01/2020.  No changed have been made since.
+Below is the group's ''Code of Conduct', as agreed during the first meeting of Sprint 1, dated 17/01/2020.  No changed have been made since.
 1.  **No social media** in meetings
 2.  If a member is **late** to a meeting, they have to buy snacks to improve group morale
 3.  If a member is **absent** from a meeting, they have to buy first round at pub post-meeting
