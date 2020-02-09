@@ -1,5 +1,5 @@
 FROM openjdk:latest
-COPY ./target/classes/com /tmp/com
+COPY ./target/Group6-0.1.0.1-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.napier.sem.DataBase"]
+ENTRYPOINT ["java", "-jar", "Group6-0.1.0.1-jar-with-dependencies.jar"]
 
