@@ -33,12 +33,22 @@ public class CountriesData {
 
     public String code2;
 
-    public String toString(){
+    public String toString(String parameter){
         String data ="";
-        data += name;
-        data += ", ";
-        data += population;
-
+        if(parameter.contains("continent")) {
+            data += continent;
+            data += ", ";
+        }
+        if(parameter.contains("name"))
+        {
+            data += name;
+            data += ", ";
+        }
+        if(parameter.contains("population"))
+        {
+            data += population;
+            data += ", ";
+        }
         return data;
     }
 

@@ -9,12 +9,13 @@ public class DataBase
     public static void main(String[] args)
     {
         DataBase db = new DataBase();
+        CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
         //connect to the database
         db.connect();
-    System.out.println("cunts");
-        //countries reports large to small
-        CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
+        //countries reports large to small in world
         CountryLtoS.getCountriesLargeToSmallInWorld(con);
+        //countries reports large to small in continent
+        CountryLtoS.getCountriesLargeToSmallInContinent(con);
 
 
         //disconnect from database
