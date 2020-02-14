@@ -42,9 +42,10 @@ A request for population information is sent to the organisation.
 
 ## EXTENSIONS
 
-3. **Missing population data**:
+1. **Missing population data**:
     1. User informs organisation of missing population data.
-
+2. **Country/Region given is not valid**:
+    1. Application tells user to input the Country/Region again.
 ## SUB-VARIATIONS
 
 None.

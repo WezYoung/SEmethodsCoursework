@@ -46,6 +46,8 @@ A request for population information is sent to the organisation.
     1. User informs organisation of missing population data.
 2. **Number (N) given is not valid**:
     1. Application tells user to input number again.
+3. **Country/Region given is not valid**:
+    1. Application tells user to input the Country/Region again.
 
 ## SUB-VARIATIONS
 
