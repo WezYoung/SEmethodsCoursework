@@ -11,12 +11,14 @@ public class DataBase
         DataBase db = new DataBase();
         //connect to the database
         db.connect();
-        //disconnect from database
-        db.disconnect();
-
+    System.out.println("cunts");
         //countries reports large to small
         CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
         CountryLtoS.getCountriesLargeToSmallInWorld(con);
+
+
+        //disconnect from database
+        db.disconnect();
     }
 
     /**

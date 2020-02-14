@@ -33,4 +33,13 @@ public class CountriesData {
 
     public String code2;
 
+    public String toString(){
+        String data ="";
+        data += name;
+        data += ", ";
+        data += population;
+
+        return data;
+    }
+
 }
