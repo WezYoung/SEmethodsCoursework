@@ -4,6 +4,8 @@ import java.sql.*;
 
 public class DataBase
 {
+    private static Connection con = null;
+
     public static void main(String[] args)
     {
         DataBase db = new DataBase();
@@ -11,9 +13,11 @@ public class DataBase
         db.connect();
         //disconnect from database
         db.disconnect();
-    }
 
-    private Connection con = null;
+        //countries reports large to small
+        CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
+        CountryLtoS.getCountriesLargeToSmallInWorld(con);
+    }
 
     /**
      * Connect to the MySQL database.
