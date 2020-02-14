@@ -20,7 +20,7 @@ We know all population information. Database contains all countries, continents,
 
 ### Success End Condition
 
-A report is available for the user to provide to the organisation.
+A report is available for the user to provide to the organisation which displays people, people living in cities and people not living in cities.
 
 ### Failed End Condition
 

@@ -20,7 +20,7 @@ We know all countries in the world. Database contains all countries, continents,
 
 ### Success End Condition
 
-A report is available for the user to provide to the organisation.
+A report is available for the user to provide to the organisation which displays countries organised by largest to smallest.
 
 ### Failed End Condition
 

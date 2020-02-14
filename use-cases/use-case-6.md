@@ -16,11 +16,11 @@ Primary task.
 
 ### Preconditions
 
-We know all cities in the world. Database contains all countries, continents, regions, districts and cities.
+We know all cities in the world. Database contains all countries, continents, regions, districts and cities. We also know N, after the user enters its value.
 
 ### Success End Condition
 
-A report is available for the user to provide to the organisation.
+A report is available for the user to provide to the organisation which displays the top (N) capital cities.
 
 ### Failed End Condition
 

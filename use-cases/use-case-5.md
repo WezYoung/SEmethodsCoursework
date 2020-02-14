@@ -20,7 +20,7 @@ We know all the capital cities in the world. Database contains all countries, co
 
 ### Success End Condition
 
-A report is available for the user to provide to the organisation.
+A report is available for the user to provide to the organisation which displays all capital cities from largest to smallest.
 
 ### Failed End Condition
 
