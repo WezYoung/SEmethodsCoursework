@@ -9,7 +9,7 @@ rectangle "Country Program " {
 
     usecase UC1 as "Gets (N) from user"
 
-    usecase UC2 as "Get top (N) Capital Cities"
+    usecase UC2 as "Get top (N) Capital Cities by size"
 
     usecase UCa as "Displays report"
 

@@ -9,8 +9,7 @@ rectangle "Country Program " {
 
     usecase UC1 as "Gets (N) from user"
 
-    usecase UC2 as "Get top (N) Countries from
-    largest to smallest"
+    usecase UC2 as "Get top (N) Countries by size"
 
     usecase UCa as "Displays report"
 
