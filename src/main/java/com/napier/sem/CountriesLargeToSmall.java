@@ -75,4 +75,38 @@ public class CountriesLargeToSmall {
         }
         return null;
     }
+
+    public CountriesData getCountriesLargeToSmallInRegion(Connection con)
+    {
+        try{
+            //create an SQL statement
+            Statement stmt = con.createStatement();
+            String strSelect =
+                    "SELECT `Name`, `Population`, `Region` " +
+                            "FROM `country` " +
+                            "GROUP BY `Name`, `Region`, `Population` " +
+                            "ORDER BY `Population` Desc";
+            //execute statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            //Return country if valid
+            //check one is returned
+            while(rset.next())
+            {
+                CountriesData country = new CountriesData();
+                country.region = rset.getNString("region");
+                country.name = rset.getNString("name");
+                country.population = rset.getInt("population");
+                System.out.println(country.toString("region, name, population"));
+            }
+
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+        return null;
+    }
 }

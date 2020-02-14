@@ -35,6 +35,11 @@ public class CountriesData {
 
     public String toString(String parameter){
         String data ="";
+        if(parameter.contains("region"))
+        {
+            data += region;
+            data += ", ";
+        }
         if(parameter.contains("continent")) {
             data += continent;
             data += ", ";

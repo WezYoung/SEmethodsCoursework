@@ -13,9 +13,13 @@ public class DataBase
         //connect to the database
         db.connect();
         //countries reports large to small in world
+        System.out.println("countries in the world organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInWorld(con);
         //countries reports large to small in continent
+        System.out.println("\r\ncountries in a continent organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInContinent(con);
+        System.out.println("\r\ncountries in a region organised by largest population to smallest.");
+        CountryLtoS.getCountriesLargeToSmallInRegion(con);
 
 
         //disconnect from database
