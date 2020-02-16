@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As a *User* I want to *produce a report on all the Cities in the World/Continent/Region/Country/District organised by largest population to smallest* so that *I meet the demands of the organisation* 
+As a *Statistic Analyst* I want to *produce a report on all the Cities in the World/Continent/Region/Country/District organised by largest population to smallest* so that *I meet the demands of the organisation* 
 
 ### Scope
 

@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As a *User* I want to *produce a report on people, people living in cities, and people not living in cities in each continent/region/country.* so that *I meet the demands of the organisation* 
+As a *Statistic Analyst* I want to *produce a report on people, people living in cities, and people not living in cities in each continent/region/country.* so that *I meet the demands of the organisation* 
 
 ### Scope
 

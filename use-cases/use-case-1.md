@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As a *User* I want to *produce a report on all the countries in the World/Continent/Region* organised *largest to smallest* so that *I meet the demands of the organisation*
+As a *Statistic Analyst* I want to *produce a report on all the countries in the World/Continent/Region* organised *largest to smallest* so that *I meet the demands of the organisation*
 
 ### Scope
 
