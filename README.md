@@ -8,7 +8,7 @@ This is the SEM Module coursework for Group 6.  This module was run at Edinburgh
 
 
 # Code of Conduct
-Below is the group's ''Code of Conduct', as aggreed during the first meeting of Sprint 1, dated 17/01/2020.  No changed have been made since.
+Below is the group's ''Code of Conduct', as agreed during the first meeting of Sprint 1, dated 17/01/2020.  No changed have been made since.
 1.  **No social media** in meetings
 2.  If a member is **late** to a meeting, they have to buy snacks to improve group morale
 3.  If a member is **absent** from a meeting, they have to buy first round at pub post-meeting
@@ -17,8 +17,21 @@ Below is the group's ''Code of Conduct', as aggreed during the first meeting of 
 6.  Operate **Paperless** unless vital for working efficiently
 
 # Build Status
-Master Build Status [![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=master)](https://travis-ci.org/WezYoung/SEmethodsCoursework)
+-Master Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=master)
 
+-Develop Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=develop)
+
+-Release Build Status ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=release)
+
+-Feature Branches Build Status::
+
+::database ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=feature/database)
+
+::sql-statements ![Build Status](https://travis-ci.org/WezYoung/SEmethodsCoursework.svg?branch=feature/sql-statements)
+
+-License ![LICENSE](https://img.shields.io/github/license/WezYoung/SEmethodsCoursework.svg?style=flat-square)
+
+-Release ![Releases](https://img.shields.io/github/release/WezYoung/SEmethodsCoursework/all.svg?style=flat-square)
 # Product Backlog
 Created and maintained by Lewis Kaye
 ## Sprint 1
