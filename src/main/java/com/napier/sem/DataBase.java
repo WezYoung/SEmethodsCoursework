@@ -12,12 +12,16 @@ public class DataBase
         CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
         //connect to the database
         db.connect();
+
         //countries reports large to small in world
         System.out.println("countries in the world organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInWorld(con);
+
         //countries reports large to small in continent
         System.out.println("\r\ncountries in a continent organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInContinent(con);
+
+        //countries reports large to small in region
         System.out.println("\r\ncountries in a region organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInRegion(con);
 
