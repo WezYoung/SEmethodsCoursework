@@ -1,0 +1,3 @@
+[submodule "semDatabase"]
+	path = semDatabase
+	url = https://github.com/WezYoung/semDatabase
