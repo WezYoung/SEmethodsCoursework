@@ -9,17 +9,31 @@ public class DataBase
     public static void main(String[] args)
     {
         DataBase db = new DataBase();
+
         CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
+        CitiesLargeToSmall CitiesLtoS = new CitiesLargeToSmall();
+
         //connect to the database
         db.connect();
+
+        //TODO Add switch statement for UI
         //countries reports large to small in world
         System.out.println("countries in the world organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInWorld(con);
         //countries reports large to small in continent
         System.out.println("\r\ncountries in a continent organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInContinent(con);
+        //countries reports large to small in region
         System.out.println("\r\ncountries in a region organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInRegion(con);
+
+        //TODO look up why unicode in printing
+        //Cities report large to small in world
+        System.out.println("cities in the world organised by largest population to smallest.");
+        CitiesLtoS.getCitiesLargeToSmallInWorld(con);
+        //Cities report large to small in continent
+        System.out.println("\r\ncities in a continent organised by largest population to smallest.");
+        CitiesLtoS.getCitiesLargeToSmallInContinent(con);
 
 
         //disconnect from database

@@ -5,43 +5,35 @@ public class CitiesData {
 
     private int id;
     private String name;
-    private String countryCode;
     private String district;
     private int population;
 
-    public void setId(int id) {
-        this.id = id;
-    }
     public int getId() {
         return id;
     }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setId(int id) {
+        this.id = id;
     }
+
     public String getName() {
         return name;
     }
-
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
-    }
-    public String getCountryCode() {
-        return countryCode;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setDistrict(String district) {
-        this.district = district;
-    }
     public String getDistrict() {
         return district;
     }
-
-    public void setPopulation(int population) {
-        this.population = population;
+    public void setDistrict(String district) {
+        this.district = district;
     }
+
     public int getPopulation() {
         return population;
+    }
+    public void setPopulation(int population) {
+        this.population = population;
     }
 
     //Override .toString() to print data needed

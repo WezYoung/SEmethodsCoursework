@@ -31,8 +31,8 @@ public class CountriesLargeToSmall {
             {
                 CountriesData country = new CountriesData();
                 //Result set gets name and population data
-                country.name = rset.getNString("Name");
-                country.population = rset.getInt("population");
+                country.setName(rset.getNString("Name"));
+                country.setPopulation(rset.getInt("population"));
                 //Puts data into one string to be displayed
                 System.out.println(country.toString("name, population"));
             }
@@ -64,9 +64,9 @@ public class CountriesLargeToSmall {
             while(rset.next())
             {
                 CountriesData country = new CountriesData();
-                country.continent = rset.getNString("continent");
-                country.name = rset.getNString("name");
-                country.population = rset.getInt("population");
+                country.setContinent(rset.getNString("continent"));
+                country.setName(rset.getNString("name"));
+                country.setPopulation( rset.getInt("population"));
                 System.out.println(country.toString("continent, name, population"));
             }
 
@@ -95,9 +95,9 @@ public class CountriesLargeToSmall {
             while(rset.next())
             {
                 CountriesData country = new CountriesData();
-                country.region = rset.getNString("region");
-                country.name = rset.getNString("name");
-                country.population = rset.getInt("population");
+                country.setRegion(rset.getNString("region"));
+                country.setName(rset.getNString("name"));
+                country.setPopulation(rset.getInt("population"));
                 System.out.println(country.toString("region, name, population"));
             }
 
