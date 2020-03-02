@@ -1,13 +1,21 @@
 package com.napier.sem;
 
 public class CitiesData {
-
+/*
+Class created by Wez Young(40402601). This class contains the getters and setters as well as
+the toString methods for city related data, including id, name, country code, district
+and population.
+ */
 
     private int id;
     private String name;
     private String countryCode;
     private String district;
     private int population;
+
+    /*
+    Getters and Setters for type declarations
+     */
 
     public void setId(int id) {
         this.id = id;

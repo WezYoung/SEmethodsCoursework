@@ -1,7 +1,11 @@
 package com.napier.sem;
 
 import java.sql.*;
-
+/*
+Class created by Wez Young(40402601). This class generates as well as connects to the world.sql file.
+The world.sql file contains all data needed for world population and allows us to form SQL statements to
+sort data in the file.
+ */
 public class DataBase
 {
     private static Connection con = null;

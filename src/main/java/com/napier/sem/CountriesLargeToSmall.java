@@ -6,7 +6,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+Class created by Wez Young(40402601). This class contains SQL statements sorting populations of
+countries in the world from largest to smallest. Sorts populations of countries in continents from
+largest to smallest and sorts populations in regions of countries from largest to smallest.
+ */
 public class CountriesLargeToSmall {
 
     //Gets and sorts populations of countries in the world from largest to smallest

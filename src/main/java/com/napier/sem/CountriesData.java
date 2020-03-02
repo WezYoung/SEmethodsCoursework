@@ -1,4 +1,10 @@
 package com.napier.sem;
+/*
+Class was created by Wez Young(40402601). This class declares all the necessary types
+needed for the countries of the database. It also contains a toString to print
+necessary data.
+ */
+
 
 public class CountriesData {
 

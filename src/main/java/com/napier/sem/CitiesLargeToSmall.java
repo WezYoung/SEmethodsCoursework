@@ -4,6 +4,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+/*
+Class was created by Wez Young(40402601). This class contains SQL statements for
+cities from large to small based on population in the world, in continents, in countries,
+in regions and in districts. 
+ */
 public class CitiesLargeToSmall {
 
     public CitiesData getCitiesLargeToSmallInWorld(Connection con)
