@@ -2,36 +2,114 @@ package com.napier.sem;
 
 public class CountriesData {
 
-    //Country code
-    public String code;
-    //Country name
-    public String name;
-    //Continent name
-    public String continent;
-    //Region name
-    public String region;
-    //Surface area of country
-    public double surfaceArea;
-    //Year of independence
-    public int indepYear;
-    //Population of country
-    public int population;
-    //Life expectancy of country
-    public double lifeExpectancy;
-    //Gross National Population
-    public double gnp;
-    //Older Gross National Populations
-    public double gnpOld;
-    //Local name of country
-    public String localName;
+    private String code, name, continent, region, localName, governmentForm, headOfState, code2;
+    private double surfaceArea, lifeExpectancy, gnp, gnpOld;
+    private int indepYear, population, capital;
 
-    public String governmentForm;
-    //The head of state of country
-    public String headOfState;
-    //Capital of country
-    public int capital;
-    //Second country code
-    public String code2;
+    public String getCode() {
+        return code;
+    }
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getContinent() {
+        return continent;
+    }
+    public void setContinent(String continent) {
+        this.continent = continent;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    public String getLocalName() {
+        return localName;
+    }
+    public void setLocalName(String localName) {
+        this.localName = localName;
+    }
+
+    public String getGovernmentForm() {
+        return governmentForm;
+    }
+    public void setGovernmentForm(String governmentForm) {
+        this.governmentForm = governmentForm;
+    }
+
+    public String getHeadOfState() {
+        return headOfState;
+    }
+    public void setHeadOfState(String headOfState) {
+        this.headOfState = headOfState;
+    }
+
+    public String getCode2() {
+        return code2;
+    }
+    public void setCode2(String code2) {
+        this.code2 = code2;
+    }
+
+    public double getSurfaceArea() {
+        return surfaceArea;
+    }
+    public void setSurfaceArea(double surfaceArea) {
+        this.surfaceArea = surfaceArea;
+    }
+
+    public double getLifeExpectancy() {
+        return lifeExpectancy;
+    }
+    public void setLifeExpectancy(double lifeExpectancy) {
+        this.lifeExpectancy = lifeExpectancy;
+    }
+
+    public double getGnp() {
+        return gnp;
+    }
+    public void setGnp(double gnp) {
+        this.gnp = gnp;
+    }
+
+    public double getGnpOld() {
+        return gnpOld;
+    }
+    public void setGnpOld(double gnpOld) {
+        this.gnpOld = gnpOld;
+    }
+
+    public int getIndepYear() {
+        return indepYear;
+    }
+    public void setIndepYear(int indepYear) {
+        this.indepYear = indepYear;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+    public void setPopulation(int population) {
+        this.population = population;
+    }
+
+    public int getCapital() {
+        return capital;
+    }
+    public void setCapital(int capital) {
+        this.capital = capital;
+    }
 
     //Override .toString() to print data needed
     public String toString(String parameter){
