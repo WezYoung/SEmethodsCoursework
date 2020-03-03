@@ -17,28 +17,40 @@ public class CountriesLargeToSmall {
     public CountriesData getCountriesLargeToSmallInWorld(Connection con)
     {
         try{
-            //create an SQL statement
+            //Create SQL Statement
             Statement stmt = con.createStatement();
+
             //Create string for SQL statement
-            String strSelect =
-                    "SELECT `Name`, `Population` " +
+            String strQuery =
+                    "SELECT `Code`, `Name`, `Continent`, `Region`, `Population`, `Capital`" +
                     "FROM `country` " +
                     "ORDER BY `Population` Desc";
-            //execute statement
-            ResultSet rset = stmt.executeQuery(strSelect);
 
-            //List<CountriesData> countryList = new ArrayList<>();
 
-            //Return country if valid
-            //check one is returned
+            //Execute Query, store results in a ResultSet
+            ResultSet rset = stmt.executeQuery(strQuery);
+
+            List<Country> countryList = new ArrayList<Country>();
+
+            //Go through all valid results, adding to Objects [Country, City etc.]
             while(rset.next())
             {
-                CountriesData country = new CountriesData();
-                //Result set gets name and population data
-                country.setName(rset.getNString("Name"));
-                country.setPopulation(rset.getInt("population"));
-                //Puts data into one string to be displayed
-                System.out.println(country.toString("name, population"));
+                //Get Each Property of the country
+                String code = rset.getNString("Code");
+                String name = rset.getNString("Name");
+                String continent = rset.getNString("Continent");
+                String region = rset.getNString("Region");
+                int population = rset.getInt("Population");
+                //int population = Convert(rset.getNString("Population"));
+
+                //Create City - just name as no city data needed for this report
+                City capital = new City(rset.getNString("Capital"));
+
+                //Create Country Object
+                Country country = new Country(code, name, continent, region, population, capital);
+
+                //Add Country to list
+                countryList.add(country);
             }
 
         }

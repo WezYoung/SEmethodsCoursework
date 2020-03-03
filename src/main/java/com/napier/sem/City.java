@@ -8,7 +8,7 @@ public class City {
     private int population;
 
 
-    //Constructor
+    //Constructors
     public City(String name, Country country, String district, int population) {
         this.name = name;
         this.country = country;
@@ -16,6 +16,11 @@ public class City {
         this.population = population;
     }
 
+    //Constructor for just name
+    //  ie. for when no city data is needed for a report
+    public City(String name) {
+        this.name = name;
+    }
 
     //Getters and Setters
     public String getName() {

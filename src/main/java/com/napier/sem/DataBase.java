@@ -11,6 +11,8 @@ public class DataBase
     //Variable to store db connection
     private static Connection con = null;
 
+
+    //Main
     public static void main(String[] args)
     {
         //Initialise UI (Splash Screen?)
@@ -18,6 +20,7 @@ public class DataBase
         //Create Database
         DataBase db = new DataBase();
 
+        //Queries
         CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
         CitiesLargeToSmall CitiesLtoS = new CitiesLargeToSmall();
 
