@@ -2,50 +2,58 @@ package com.napier.sem;
 
 import java.sql.*;
 /*
-Class created by Wez Young(40402601). This class generates as well as connects to the world.sql file.
+This class created by Wez Young(40402601). This class generates as well as connects to the world.sql file.
 The world.sql file contains all data needed for world population and allows us to form SQL statements to
 sort data in the file.
  */
 public class DataBase
 {
+    //Variable to store db connection
     private static Connection con = null;
 
     public static void main(String[] args)
     {
+        //Initialise UI (Splash Screen?)
+
+        //Create Database
         DataBase db = new DataBase();
 
         CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
         CitiesLargeToSmall CitiesLtoS = new CitiesLargeToSmall();
 
-        //connect to the database
+        //Connect to Database
         db.connect();
 
         //TODO Add switch statement for UI
-        //countries reports large to small in world
+        //TODO look up why unicode characters not showing correctly when printed
+
+        //Print Report - largest to smallest Countries in world
         System.out.println("countries in the world organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInWorld(con);
-        //countries reports large to small in continent
+
+        //Print Report - largest to smallest Countries in continent
         System.out.println("\r\ncountries in a continent organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInContinent(con);
-        //countries reports large to small in region
+
+        //Print Report - largest to smallest Countries in region
         System.out.println("\r\ncountries in a region organised by largest population to smallest.");
         CountryLtoS.getCountriesLargeToSmallInRegion(con);
 
-        //TODO look up why unicode in printing
         //Cities report large to small in world
         System.out.println("cities in the world organised by largest population to smallest.");
         CitiesLtoS.getCitiesLargeToSmallInWorld(con);
+
         //Cities report large to small in continent
         System.out.println("\r\ncities in a continent organised by largest population to smallest.");
         CitiesLtoS.getCitiesLargeToSmallInContinent(con);
 
 
-        //disconnect from database
+        //Disconnect from Database
         db.disconnect();
     }
 
     /**
-     * Connect to the MySQL database.
+     * This Method connects to the MySQL database.
      */
     public void connect()
     {
@@ -86,7 +94,7 @@ public class DataBase
     }
 
     /**
-     * Disconnect from the MySQL database.
+     * This Method disconnects from the MySQL database.
      */
     public void disconnect()
     {
