@@ -1,0 +1,22 @@
+@startuml
+
+actor HR as "Statistic Analyst"
+
+rectangle Database
+
+rectangle "Country Program " {
+
+
+    usecase UC1 as "Gets (N) from user"
+
+    usecase UC2 as "Get top (N) Countries by size"
+
+    usecase UCa as "Displays report"
+
+    HR - UC1
+    UC1 - UC2
+    UC2 ..> UCa : include
+    UC2 - Database
+}
+
+@enduml

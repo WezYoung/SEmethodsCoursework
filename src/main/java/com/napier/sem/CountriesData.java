@@ -6,6 +6,9 @@ necessary data.
  */
 
 
+/*
+This class can be instantiated into an object which stores the data returned by SQL Queries
+ */
 public class CountriesData {
 
     private String code, name, continent, region;
@@ -55,26 +58,26 @@ public class CountriesData {
 
     //Override .toString() to print data needed
     public String toString(String parameter){
-        String data ="";
-        //if statements to check what data is needed and to be appended on to string
-        if(parameter.contains("region"))
-        {
-            data += region;
-            data += ", ";
-        }
-        if(parameter.contains("continent")) {
-            data += continent;
-            data += ", ";
-        }
-        if(parameter.contains("name"))
-        {
-            data += name;
-            data += ", ";
-        }
-        if(parameter.contains("population"))
-        {
-            data += population;
-            data += ", ";
+            String data ="";
+            //if statements to check what data is needed and to be appended on to string
+            if(parameter.contains("region"))
+            {
+                data += region;
+                data += ", ";
+            }
+            if(parameter.contains("continent")) {
+                data += continent;
+                data += ", ";
+            }
+            if(parameter.contains("name"))
+            {
+                data += name;
+                data += ", ";
+            }
+            if(parameter.contains("population"))
+            {
+                data += population;
+                data += ", ";
         }
         return data;
     }
