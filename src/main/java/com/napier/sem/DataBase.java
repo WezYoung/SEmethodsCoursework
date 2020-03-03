@@ -1,6 +1,8 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.List;
+
 /*
 This class created by Wez Young(40402601). This class generates as well as connects to the world.sql file.
 The world.sql file contains all data needed for world population and allows us to form SQL statements to
@@ -16,38 +18,46 @@ public class DataBase
     public static void main(String[] args)
     {
         //Initialise UI (Splash Screen?)
+            //Menu - Chose topic eg. Countries report, Cities report, Capital City report, Population report..
+
 
         //Create Database
         DataBase db = new DataBase();
 
-        //Queries
+        //Methods containing relevant Queries to get data from DB
         CountriesLargeToSmall CountryLtoS = new CountriesLargeToSmall();
         CitiesLargeToSmall CitiesLtoS = new CitiesLargeToSmall();
 
         //Connect to Database
         db.connect();
 
+        //Create printer to print out the Report
+        ReportPrinter printer = new ReportPrinter();
+
         //TODO Add switch statement for UI
         //TODO look up why unicode characters not showing correctly when printed
 
         //Print Report - largest to smallest Countries in world
-        System.out.println("countries in the world organised by largest population to smallest.");
-        CountryLtoS.getCountriesLargeToSmallInWorld(con);
+        System.out.println("Printing Report: all Countries in the world organised by largest population to smallest.");
+        List<Country> listA = CountryLtoS.getCountriesLargeToSmallInWorld(con);  //List to store returned countries in
+        printer.print(listA);  //Print Report
 
         //Print Report - largest to smallest Countries in continent
-        System.out.println("\r\ncountries in a continent organised by largest population to smallest.");
-        CountryLtoS.getCountriesLargeToSmallInContinent(con);
+        System.out.println("Printing Report: all Countries in a continent organised by largest population to smallest.");
+        //List<Country> listB = CountryLtoS.getCountriesLargeToSmallInContinent(con);  //List to store returned countries in
+        //printer.print(listB);  //Print Report
 
         //Print Report - largest to smallest Countries in region
-        System.out.println("\r\ncountries in a region organised by largest population to smallest.");
-        CountryLtoS.getCountriesLargeToSmallInRegion(con);
+        System.out.println("Printing Report: all Countries in a region organised by largest population to smallest.");
+        //List<Country> listC = CountryLtoS.getCountriesLargeToSmallInRegion(con);  //List to store returned countries in
+        //printer.print(listC);  //Print Report
 
-        //Cities report large to small in world
-        System.out.println("cities in the world organised by largest population to smallest.");
+        //Print Report - largest to smallest Cities in world
+        System.out.println("Printing Report: all Cities in the world organised by largest population to smallest.");
         CitiesLtoS.getCitiesLargeToSmallInWorld(con);
 
-        //Cities report large to small in continent
-        System.out.println("\r\ncities in a continent organised by largest population to smallest.");
+        //Print Report - largest to smallest Cities in continent
+        System.out.println("Printing Report: all Cities in a continent organised by largest population to smallest.");
         CitiesLtoS.getCitiesLargeToSmallInContinent(con);
 
 

@@ -7,14 +7,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 /*
-Class created by Wez Young(40402601). This class contains SQL statements sorting populations of
-countries in the world from largest to smallest. Sorts populations of countries in continents from
+Class created and maintained by Wez Young(40402601) and Lewis Kaye(40397385).
+This class contains SQL statements sorting populations of countries in the world from largest to smallest.
+Sorts populations of countries in continents from
 largest to smallest and sorts populations in regions of countries from largest to smallest.
  */
 public class CountriesLargeToSmall {
 
     //Gets and sorts populations of countries in the world from largest to smallest
-    public CountriesData getCountriesLargeToSmallInWorld(Connection con)
+    public List<Country> getCountriesLargeToSmallInWorld(Connection con)
     {
         try{
             //Create SQL Statement
@@ -30,7 +31,8 @@ public class CountriesLargeToSmall {
             //Execute Query, store results in a ResultSet
             ResultSet rset = stmt.executeQuery(strQuery);
 
-            List<Country> countryList = new ArrayList<Country>();
+            //Create list to store countries in
+            List<Country> countryList = new ArrayList<>();
 
             //Go through all valid results, adding to Objects [Country, City etc.]
             while(rset.next())
@@ -53,6 +55,8 @@ public class CountriesLargeToSmall {
                 countryList.add(country);
             }
 
+            //Return List
+            return countryList;
         }
         catch(Exception e)
         {
@@ -61,7 +65,6 @@ public class CountriesLargeToSmall {
             System.out.println("Failed to get country details");
             return null;
         }
-        return null;
     }
 
     //Gets and sorts populations of countries in continents from largest to smallest
