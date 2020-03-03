@@ -1,5 +1,8 @@
 package com.napier.sem;
 
+/*
+This class can be instantiated into an object which stores the data returned by SQL Queries
+ */
 public class CountriesData {
 
     //Country code
