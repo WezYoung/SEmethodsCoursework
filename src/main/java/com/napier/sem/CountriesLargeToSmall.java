@@ -23,8 +23,9 @@ public class CountriesLargeToSmall {
 
             //Create string for SQL statement
             String strQuery =
-                    "SELECT `Code`, `Name`, `Continent`, `Region`, `Population`, `Capital`" +
-                    "FROM `country` " +
+                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS Country" +
+                    "FROM `country` co " +
+                    "JOIN `city` ci ON ci.`CountryCode` = co.`Code`" +
                     "ORDER BY `Population` Desc";
 
 
@@ -38,15 +39,15 @@ public class CountriesLargeToSmall {
             while(rset.next())
             {
                 //Get Each Property of the country
-                String code = rset.getNString("Code");
-                String name = rset.getNString("Name");
-                String continent = rset.getNString("Continent");
-                String region = rset.getNString("Region");
+                String code = rset.getString("Code");
+                String name = rset.getString("Name");
+                String continent = rset.getString("Continent");
+                String region = rset.getString("Region");
                 int population = rset.getInt("Population");
-                //int population = Convert(rset.getNString("Population"));
 
                 //Create City - just name as no city data needed for this report
-                City capital = new City(rset.getNString("Capital"));
+                City capital = new City(rset.getString("Country"));
+                System.out.println(capital.getName());
 
                 //Create Country Object
                 Country country = new Country(code, name, continent, region, population, capital);

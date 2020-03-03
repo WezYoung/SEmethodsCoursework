@@ -11,31 +11,15 @@ public class ReportPrinter {
         if (list != null) {
 
             //Print Header
-            String header = "";
-
-            header += "Code" + "\t";
-            header += "Name" + "\t";
-            header += "Continent" + "\t";
-            header += "Population" + "\t";
-            header += "Capital";
-
-            //Print Header
-            System.out.println(header);
-
+            System.out.format("%-8s%-37s%-20s%-27s%-11s%-35s\n", "Code", "Name", "Continent", "Region", "Population", "Capital");
+            System.out.println("-------------------------------------------------------------------------------------------------");
 
             //Loop through list
             for (Country country : list) {
-                String line = "";
 
-                line += country.getCode() + "\t";
-                line += country.getName() + "\t";
-                line += country.getContinent() + "\t";
-                line += country.getRegion() + "\t";
-                line += country.getPopulation() + "\t";
-                line += country.getCapital();
+                String cap = country.getCapital().getName();
+                System.out.format("%-8s%-37s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(), country.getRegion(), country.getPopulation(), cap);
 
-                //Print Line
-                System.out.println(line);
             }
         } else {
             //ERROR, no results

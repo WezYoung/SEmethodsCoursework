@@ -20,7 +20,11 @@ public class City {
     //  ie. for when no city data is needed for a report
     public City(String name) {
         this.name = name;
+        this.country = null;
+        this.district = "";
+        this.population = -1;
     }
+
 
     //Getters and Setters
     public String getName() {
