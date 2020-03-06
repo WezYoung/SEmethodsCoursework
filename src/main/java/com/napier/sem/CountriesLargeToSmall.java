@@ -69,65 +69,115 @@ public class CountriesLargeToSmall {
     }
 
     //Gets and sorts populations of countries in continents from largest to smallest
-    public CountriesData getCountriesLargeToSmallInContinent(Connection con)
+    public List<Country> getCountriesLargeToSmallInContinent(Connection con)
     {
         try{
+            //Create SQL Statement
             Statement stmt = con.createStatement();
-            String strSelect =
-                    "SELECT `Name`, `Population`, `Continent` " +
-                            "FROM `country` " +
-                            "GROUP BY `Name`, `Continent`, `Population` " +
+
+            //Create string for SQL statement
+            String strQuery =
+                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS Country" +
+                            "FROM `country` co " +
+                            "JOIN `city` ci ON ci.`CountryCode` = co.`Code`" +
+                            "WHERE co.`Continent` = 'Europe' " +
                             "ORDER BY `Population` Desc";
 
-            ResultSet rset = stmt.executeQuery(strSelect);
 
+            //Execute Query, store results in a ResultSet
+            ResultSet rset = stmt.executeQuery(strQuery);
+
+            //Create list to store countries in
+            List<Country> countryList = new ArrayList<>();
+
+            //Go through all valid results, adding to Objects [Country, City etc.]
             while(rset.next())
             {
-                CountriesData country = new CountriesData();
-                country.setContinent(rset.getNString("continent"));
-                country.setName(rset.getNString("name"));
-                country.setPopulation( rset.getInt("population"));
-                System.out.println(country.toString("continent, name, population"));
+                //Get Each Property of the country
+                String code = rset.getString("Code");
+                String name = rset.getString("Name");
+                String continent = rset.getString("Continent");
+                String region = rset.getString("Region");
+                int population = rset.getInt("Population");
+
+                //Create City - just name as no city data needed for this report
+                City capital = new City(rset.getString("Country"));
+                System.out.println(capital.getName());
+
+                //Create Country Object
+                Country country = new Country(code, name, continent, region, population, capital);
+
+                //Add Country to list
+                countryList.add(country);
             }
 
+            //Return List
+            return countryList;
         }
         catch(Exception e)
         {
+            //error message displays if unable to get country data
             System.out.println(e.getMessage());
             System.out.println("Failed to get country details");
             return null;
         }
-        return null;
     }
+
 
     //Gets and sorts populations of countries in regions from largest to smallest
-    public CountriesData getCountriesLargeToSmallInRegion(Connection con)
+    public List<Country> getCountriesLargeToSmallInRegion(Connection con)
     {
         try{
+            //Create SQL Statement
             Statement stmt = con.createStatement();
-            String strSelect =
-                    "SELECT `Name`, `Population`, `Region` " +
-                            "FROM `country` " +
-                            "GROUP BY `Name`, `Region`, `Population` " +
-                            "ORDER BY `Population` Desc";
-            ResultSet rset = stmt.executeQuery(strSelect);
 
+            //Create string for SQL statement
+            String strQuery =
+                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS Country" +
+                            "FROM `country` co " +
+                            "JOIN `city` ci ON ci.`CountryCode` = co.`Code`" +
+                            "WHERE co.`Region` = 'Caribbean' " +
+                            "ORDER BY `Population` Desc";
+
+
+            //Execute Query, store results in a ResultSet
+            ResultSet rset = stmt.executeQuery(strQuery);
+
+            //Create list to store countries in
+            List<Country> countryList = new ArrayList<>();
+
+            //Go through all valid results, adding to Objects [Country, City etc.]
             while(rset.next())
             {
-                CountriesData country = new CountriesData();
-                country.setRegion(rset.getNString("region"));
-                country.setName(rset.getNString("name"));
-                country.setPopulation(rset.getInt("population"));
-                System.out.println(country.toString("region, name, population"));
+                //Get Each Property of the country
+                String code = rset.getString("Code");
+                String name = rset.getString("Name");
+                String continent = rset.getString("Continent");
+                String region = rset.getString("Region");
+                int population = rset.getInt("Population");
+
+                //Create City - just name as no city data needed for this report
+                City capital = new City(rset.getString("Country"));
+                System.out.println(capital.getName());
+
+                //Create Country Object
+                Country country = new Country(code, name, continent, region, population, capital);
+
+                //Add Country to list
+                countryList.add(country);
             }
 
+            //Return List
+            return countryList;
         }
         catch(Exception e)
         {
+            //error message displays if unable to get country data
             System.out.println(e.getMessage());
             System.out.println("Failed to get country details");
             return null;
         }
-        return null;
     }
+
+
 }

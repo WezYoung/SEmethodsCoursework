@@ -17,8 +17,8 @@ public class ReportPrinter {
             //Loop through list
             for (Country country : list) {
 
-                String cap = country.getCapital().getName();
-                System.out.format("%-8s%-37s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(), country.getRegion(), country.getPopulation(), cap);
+                System.out.format("%-8s%-37s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(),
+                        country.getRegion(), country.getPopulation(), country.getCapital().getName());
 
             }
         } else {
@@ -34,14 +34,14 @@ public class ReportPrinter {
         if (list != null) {
 
             //Print Header
-            System.out.format("%-8s%-37s%-20s%-27s%-11s%-35s\n", "Name", "Country", "District", "Population");
+            System.out.format("%-37s%-52s%-26s%-20s%-20s%-11s\n", "Name", "Country", "Region", "Continent", "District", "Population");
             System.out.println("-------------------------------------------------------------------------------------------------");
 
             //Loop through list
-            for (Country country : list) {
+            for (City city : list) {
 
-                String cap = country.getCapital().getName();
-                System.out.format("%-8s%-37s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(), country.getRegion(), country.getPopulation(), cap);
+                System.out.format("%-37s%-52s%-26s%-20s%-20s%-11s\n",city.getName(), city.getCountry().getContinent(),
+                        city.getCountry().getRegion(), city.getPopulation());
 
             }
         } else {

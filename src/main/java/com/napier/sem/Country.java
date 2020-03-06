@@ -20,6 +20,12 @@ public class Country {
         this.capital = capital;
     }
 
+    public Country(String name, String continent, String region) {
+        this.name = name;
+        this.continent = continent;
+        this.region = region;
+    }
+
 
     //Getters and Setters
     public String getCode() {
