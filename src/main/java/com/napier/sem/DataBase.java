@@ -26,7 +26,7 @@ public class DataBase
 
         continentList.add("Europe");
         continentList.add("Asia");
-        continentList.add("Australia");
+        continentList.add("Oceania");
         continentList.add("Africa");
         continentList.add("North America");
         continentList.add("South America");
