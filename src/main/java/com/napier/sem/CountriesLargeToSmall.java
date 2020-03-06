@@ -24,8 +24,8 @@ public class CountriesLargeToSmall {
             //Create string for SQL statement
             String strQuery =
                     "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS 'Capital'" +
-                    "FROM `country` co " +
-                    "JOIN `city` ci ON ci.`ID` = co.`Capital`" +
+                    "FROM `Country` co " +
+                    "JOIN `City` ci ON ci.`ID` = co.`Capital`" +
                     "ORDER BY `Population` Desc";
 
 
@@ -72,12 +72,12 @@ public class CountriesLargeToSmall {
         try{
             //Create SQL Statement
             Statement stmt = con.createStatement();
-
+//TODO Need to modify JOIN
             //Create string for SQL statement
             String strQuery =
                     "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS 'Capital'" +
-                            "FROM `country` co " +
-                            "JOIN `city` ci ON ci.`ID` = co.`Capital`" +
+                            "FROM `Country` co " +
+                            "JOIN `City` ci ON ci.`ID` = co.`Capital`" +
                             "WHERE co.`Continent` = '" + continent + "'" +
                             "GROUP BY co.`Code`"+
                             "ORDER BY `Population` Desc";
@@ -131,8 +131,8 @@ public class CountriesLargeToSmall {
             //Create string for SQL statement
             String strQuery =
                     "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS 'Capital'" +
-                            "FROM `country` co " +
-                            "JOIN `city` ci ON ci.`ID` = co.`Capital`" +
+                            "FROM `Country` co " +
+                            "JOIN `City` ci ON ci.`ID` = co.`Capital`" +
                             "WHERE co.`Region` = '" + region + "'" +
                             "GROUP BY co.`Code`"+
                             "ORDER BY `Population` Desc";
