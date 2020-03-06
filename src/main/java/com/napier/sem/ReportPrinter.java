@@ -12,13 +12,13 @@ public class ReportPrinter {
         if (list != null) {
 
             //Print Header
-            System.out.format("%-8s%-37s%-20s%-27s%-11s%-35s\n", "Code", "Name", "Continent", "Region", "Population", "Capital");
+            System.out.format("%-8s%-38s%-20s%-27s%-11s%-35s\n", "Code", "Name", "Continent", "Region", "Population", "Capital");
             System.out.println("-------------------------------------------------------------------------------------------------------------------");
 
             //Loop through list
             for (Country country : list) {
 
-                System.out.format("%-8s%-37s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(),
+                System.out.format("%-8s%-38s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(),
                         country.getRegion(), country.getPopulation(), country.getCapital().getName());
 
             }
