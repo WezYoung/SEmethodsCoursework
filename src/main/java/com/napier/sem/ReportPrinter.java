@@ -1,5 +1,6 @@
 package com.napier.sem;
 
+import java.lang.reflect.Parameter;
 import java.util.List;
 
 public class ReportPrinter {
@@ -12,7 +13,7 @@ public class ReportPrinter {
 
             //Print Header
             System.out.format("%-8s%-37s%-20s%-27s%-11s%-35s\n", "Code", "Name", "Continent", "Region", "Population", "Capital");
-            System.out.println("-------------------------------------------------------------------------------------------------");
+            System.out.println("-------------------------------------------------------------------------------------------------------------------");
 
             //Loop through list
             for (Country country : list) {
@@ -34,14 +35,14 @@ public class ReportPrinter {
         if (list != null) {
 
             //Print Header
-            System.out.format("%-37s%-52s%-26s%-20s%-20s%-11s\n", "Name", "Country", "Region", "Continent", "District", "Population");
+            System.out.format("%-37s%-52s%-27s%-20s%-27s%-11s\n", "Name", "Country", "Region", "Continent", "District", "Population");
             System.out.println("-------------------------------------------------------------------------------------------------");
 
             //Loop through list
             for (City city : list) {
 
-                System.out.format("%-37s%-52s%-26s%-20s%-20s%-11s\n",city.getName(), city.getCountry().getContinent(),
-                        city.getCountry().getRegion(), city.getPopulation());
+                System.out.format("%-37s%-52s%-27s%-20s%-27s%-11d\n",city.getName(),city.getCountry().getName(), city.getCountry().getRegion(),
+                        city.getCountry().getContinent(), city.getDistrict(), city.getPopulation());
 
             }
         } else {
@@ -53,7 +54,7 @@ public class ReportPrinter {
 
 
     //Method to Print out a list of countries, showing only the fields defined in parameter
-    public void print(List<Country> list, String parameter)
+    public void printCountry(List<Country> list, String parameter)
     {
         //Code to print list
         if (list != null) {

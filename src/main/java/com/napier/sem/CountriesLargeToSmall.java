@@ -23,9 +23,9 @@ public class CountriesLargeToSmall {
 
             //Create string for SQL statement
             String strQuery =
-                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS Country" +
+                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS 'Capital'" +
                     "FROM `country` co " +
-                    "JOIN `city` ci ON ci.`CountryCode` = co.`Code`" +
+                    "JOIN `city` ci ON ci.`ID` = co.`Capital`" +
                     "ORDER BY `Population` Desc";
 
 
@@ -44,10 +44,8 @@ public class CountriesLargeToSmall {
                 String continent = rset.getString("Continent");
                 String region = rset.getString("Region");
                 int population = rset.getInt("Population");
-
                 //Create City - just name as no city data needed for this report
-                City capital = new City(rset.getString("Country"));
-                System.out.println(capital.getName());
+                City capital = new City(rset.getString("Capital"));
 
                 //Create Country Object
                 Country country = new Country(code, name, continent, region, population, capital);
@@ -69,7 +67,7 @@ public class CountriesLargeToSmall {
     }
 
     //Gets and sorts populations of countries in continents from largest to smallest
-    public List<Country> getCountriesLargeToSmallInContinent(Connection con)
+    public List<Country> getCountriesLargeToSmallInContinent(Connection con, String continent)
     {
         try{
             //Create SQL Statement
@@ -77,10 +75,11 @@ public class CountriesLargeToSmall {
 
             //Create string for SQL statement
             String strQuery =
-                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS Country" +
+                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS 'Capital'" +
                             "FROM `country` co " +
-                            "JOIN `city` ci ON ci.`CountryCode` = co.`Code`" +
-                            "WHERE co.`Continent` = 'Europe' " +
+                            "JOIN `city` ci ON ci.`ID` = co.`Capital`" +
+                            "WHERE co.`Continent` = '" + continent + "'" +
+                            "GROUP BY co.`Code`"+
                             "ORDER BY `Population` Desc";
 
 
@@ -96,16 +95,14 @@ public class CountriesLargeToSmall {
                 //Get Each Property of the country
                 String code = rset.getString("Code");
                 String name = rset.getString("Name");
-                String continent = rset.getString("Continent");
+                String cont = rset.getString("Continent");
                 String region = rset.getString("Region");
                 int population = rset.getInt("Population");
-
                 //Create City - just name as no city data needed for this report
-                City capital = new City(rset.getString("Country"));
-                System.out.println(capital.getName());
+                City capital = new City(rset.getString("Capital"));
 
                 //Create Country Object
-                Country country = new Country(code, name, continent, region, population, capital);
+                Country country = new Country(code, name, cont, region, population, capital);
 
                 //Add Country to list
                 countryList.add(country);
@@ -125,7 +122,7 @@ public class CountriesLargeToSmall {
 
 
     //Gets and sorts populations of countries in regions from largest to smallest
-    public List<Country> getCountriesLargeToSmallInRegion(Connection con)
+    public List<Country> getCountriesLargeToSmallInRegion(Connection con, String region)
     {
         try{
             //Create SQL Statement
@@ -133,10 +130,11 @@ public class CountriesLargeToSmall {
 
             //Create string for SQL statement
             String strQuery =
-                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS Country" +
+                    "SELECT co.`Code`, co.`Name`, co.`Continent`, co.`Region`, co.`Population`, ci.`Name` AS 'Capital'" +
                             "FROM `country` co " +
-                            "JOIN `city` ci ON ci.`CountryCode` = co.`Code`" +
-                            "WHERE co.`Region` = 'Caribbean' " +
+                            "JOIN `city` ci ON ci.`ID` = co.`Capital`" +
+                            "WHERE co.`Region` = '" + region + "'" +
+                            "GROUP BY co.`Code`"+
                             "ORDER BY `Population` Desc";
 
 
@@ -153,15 +151,16 @@ public class CountriesLargeToSmall {
                 String code = rset.getString("Code");
                 String name = rset.getString("Name");
                 String continent = rset.getString("Continent");
-                String region = rset.getString("Region");
+                String reg = rset.getString("Region");
                 int population = rset.getInt("Population");
 
                 //Create City - just name as no city data needed for this report
-                City capital = new City(rset.getString("Country"));
-                System.out.println(capital.getName());
+                City capital = new City(rset.getString("Capital"));
 
                 //Create Country Object
-                Country country = new Country(code, name, continent, region, population, capital);
+                Country country = new Country(code, name, continent, reg, population, capital);
+
+                System.out.println("DEBUG: PRINTING");
 
                 //Add Country to list
                 countryList.add(country);
