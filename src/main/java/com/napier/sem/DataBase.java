@@ -40,25 +40,25 @@ public class DataBase
         //Print Report - largest to smallest Countries in world
         System.out.println("Printing Report: all Countries in the world organised by largest population to smallest.");
         List<Country> listA = CountryLtoS.getCountriesLargeToSmallInWorld(con);  //List to store returned countries in
-        printer.print(listA);  //Print Report
+        printer.printCountry(listA);  //Print Report
 
         //Print Report - largest to smallest Countries in continent
         System.out.println("Printing Report: all Countries in a continent organised by largest population to smallest.");
         //List<Country> listB = CountryLtoS.getCountriesLargeToSmallInContinent(con);  //List to store returned countries in
-        //printer.print(listB);  //Print Report
+        //printer.printCountry(listB);  //Print Report
 
         //Print Report - largest to smallest Countries in region
         System.out.println("Printing Report: all Countries in a region organised by largest population to smallest.");
         //List<Country> listC = CountryLtoS.getCountriesLargeToSmallInRegion(con);  //List to store returned countries in
-        //printer.print(listC);  //Print Report
+        //printer.printCountry(listC);  //Print Report
 
         //Print Report - largest to smallest Cities in world
         System.out.println("Printing Report: all Cities in the world organised by largest population to smallest.");
-        CitiesLtoS.getCitiesLargeToSmallInWorld(con);
+        //CitiesLtoS.getCitiesLargeToSmallInWorld(con);
 
         //Print Report - largest to smallest Cities in continent
         System.out.println("Printing Report: all Cities in a continent organised by largest population to smallest.");
-        CitiesLtoS.getCitiesLargeToSmallInContinent(con);
+        //CitiesLtoS.getCitiesLargeToSmallInContinent(con);
 
 
         //Disconnect from Database
