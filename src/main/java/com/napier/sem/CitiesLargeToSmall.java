@@ -22,7 +22,7 @@ public class CitiesLargeToSmall {
 
             //Create string for SQL statement
             String strQuery =
-                    "SELECT ci.`Name`, co.`Continent`, co.`Region`, ci.`District`, ci.`Population`, co.`Name` AS Country" +
+                    "SELECT ci.`Name`, co.`Continent`, co.`Region`, ci.`District`, ci.`Population`, co.`Name` AS 'Country'" +
                             "FROM `city` ci " +
                             "JOIN `country` co ON ci.`CountryCode` = co.`Code`" +
                             "ORDER BY `Population` Desc";
@@ -75,10 +75,9 @@ public class CitiesLargeToSmall {
 
             //Create string for SQL statement
             String strQuery =
-                    "SELECT ci.`Name`, co.`Continent`, co.`Region`, ci.`District`, ci.`Population`, co.`Name` AS Country" +
+                    "SELECT ci.`Name`, co.`Continent`, co.`Region`, ci.`District`, ci.`Population`, co.`Name` AS 'Country'" +
                             "FROM `city` ci " +
                             "JOIN `country` co ON ci.`CountryCode` = co.`Code`" +
-                            "WHERE co.`Continent` = 'Europe' " +
                             "ORDER BY `Population` Desc";
 
 

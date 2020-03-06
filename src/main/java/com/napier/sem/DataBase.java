@@ -1,6 +1,7 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -13,12 +14,50 @@ public class DataBase
     //Variable to store db connection
     private static Connection con = null;
 
-
     //Main
     public static void main(String[] args)
     {
+        List<String> continentList = new ArrayList<>();
+        List<String> regionList = new ArrayList<>();
+
         //Initialise UI (Splash Screen?)
             //Menu - Chose topic eg. Countries report, Cities report, Capital City report, Population report..
+
+
+        continentList.add("Europe");
+        continentList.add("Asia");
+        continentList.add("Australia");
+        continentList.add("Africa");
+        continentList.add("North America");
+        continentList.add("South America");
+        continentList.add("Antarctica");
+
+        regionList.add("Northern Europe");
+        regionList.add("Southern Europe");
+        regionList.add("Eastern Europe");
+        regionList.add("Western Europe");
+        regionList.add("South and Central Asia");
+        regionList.add("Southeast Asia");
+        regionList.add("Eastern Asia");
+        regionList.add("Northern Africa");
+        regionList.add("Southern Africa");
+        regionList.add("Western Africa");
+        regionList.add("Eastern Africa");
+        regionList.add("Central Africa");
+        regionList.add("South America");
+        regionList.add("North America");
+        regionList.add("Central America");
+        regionList.add("Antarctica");
+        regionList.add("Australia and New Zealand");
+        regionList.add("Nordic Countries");
+        regionList.add("Baltic Countries");
+        regionList.add("Micronesia");
+        regionList.add("Melanesia");
+        regionList.add("British Islands");
+        regionList.add("Caribbean");
+        regionList.add("Middle East");
+        regionList.add("Polynesia");
+        regionList.add("Micronesia/Caribbean");
 
 
         //Create Database
@@ -39,14 +78,29 @@ public class DataBase
 
         //Print Report - largest to smallest Countries in world
         System.out.println("Printing Report: all Countries in the world organised by largest population to smallest.");
-        List<Country> listA = CountryLtoS.getCountriesLargeToSmallInWorld(con);  //List to store returned countries in
-        printer.printCountry(listA);  //Print Report
+        List<Country> CountryWorldList = CountryLtoS.getCountriesLargeToSmallInWorld(con);  //List to store returned countries in
+        printer.printCountry(CountryWorldList);  //Print Report
 
-        //Print Report - largest to smallest Countries in continent
         System.out.println("Printing Report: all Countries in a continent organised by largest population to smallest.");
-        List<Country> listB = CountryLtoS.getCountriesLargeToSmallInContinent(con);  //List to store returned countries in
-        printer.printCountry(listB);  //Print Report
+        //Loop for each continent
+        for(String continent : continentList){
+            //Print Report - largest to smallest Countries in continent
+            System.out.println("\nContinent Name: " + continent);
+            List<Country> listB = CountryLtoS.getCountriesLargeToSmallInContinent(con, continent);  //List to store returned countries in
+            printer.printCountry(listB);  //Print Report
+        }
 
+        System.out.println("Printing Report: all Countries in a region organised by largest population to smallest.");
+        //Loop for each region
+        for(String region : regionList){
+            //Print Report - largest to smallest Countries in a region
+            System.out.println("\nRegion Name: " + region);
+            List<Country> listC = CountryLtoS.getCountriesLargeToSmallInRegion(con, region);  //List to store returned countries in
+            printer.printCountry(listC);  //Print Report
+        }
+
+
+/*
         //Print Report - largest to smallest Countries in region
         System.out.println("Printing Report: all Countries in a region organised by largest population to smallest.");
         List<Country> listC = CountryLtoS.getCountriesLargeToSmallInRegion(con);  //List to store returned countries in
@@ -61,7 +115,7 @@ public class DataBase
         System.out.println("Printing Report: all Cities in a continent organised by largest population to smallest.");
         List<City> listE = CitiesLtoS.getCitiesLargeToSmallInContinent(con);
         printer.printCity(listE);  //Print Report
-
+*/
 
         //Disconnect from Database
         db.disconnect();
