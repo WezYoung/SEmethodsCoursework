@@ -27,9 +27,8 @@ public class AppIntegrationTest {
 
     @Test
     public void testGetCountry(){
-        Country country = new Country();
-        country.setName("Spain");
-        country.getName();
+        City city = new City("Amsterdam");
+        Country country = new Country("GER", "Germany", "Europe", "Central Europe", 0, city);
         countrylist.add(country);
         rp.printCountry(countrylist);
     }
