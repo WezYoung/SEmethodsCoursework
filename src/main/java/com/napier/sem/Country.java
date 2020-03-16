@@ -9,9 +9,18 @@ public class Country {
     private int population;
     private City capital;
 
+    public Country(){};
+
+    public Country(String name){
+        this.name = name;
+    }
+
 
     //Constructor
     public Country(String code, String name, String continent, String region, int population, City capital) {
+        if (code.length() != 3){
+            throw new IllegalArgumentException("Code must consist of 3 letters");
+        }
         this.code = code;
         this.name = name;
         this.continent = continent;
@@ -24,6 +33,11 @@ public class Country {
         this.name = name;
         this.continent = continent;
         this.region = region;
+    }
+
+    public Country(String name, String continent){
+        this.name = name;
+        this.continent = continent;
     }
 
 

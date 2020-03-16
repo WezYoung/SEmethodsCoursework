@@ -14,6 +14,13 @@ public class CountryLanguage {
         this.percentage = percentage;
     }
 
+    public CountryLanguage(Country country, String language){
+        this.country = country;
+        this.language = language;
+        this.isOfficial = true;
+        this.percentage = 66.7;
+    }
+
 
     //Getters and Setters
     public Country getCountry() {
