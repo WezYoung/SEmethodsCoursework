@@ -12,12 +12,14 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 public class CountryAppTest {
 
+    // Test 1, adds Germany to country and gets name of country
     @Test
     public void testCountryReportName(){
         Country country = new Country("Germany");
         assertEquals("Germany", country.getName());
     }
 
+    //Test 2, checks length of code is 3
     @Test
     public void testCountryReportCodeLength(){
         assertThrows(IllegalArgumentException.class,
@@ -26,6 +28,7 @@ public class CountryAppTest {
                 () -> new Country("DE", "null", "null", "null", 0, null));
     }
 
+    //Test 3, tests entire country report with all fields
     @Test
     public void testCountryReportSuccess(){
         City city = new City("Amsterdam");
@@ -53,6 +56,7 @@ public class CountryAppTest {
     }
     */
 
+    //Test 4, tests addition of continent to the country
     @Test
     public void testContinentReport(){
         Country country = new Country("The Netherlands", "Europe");

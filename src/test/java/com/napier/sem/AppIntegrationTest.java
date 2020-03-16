@@ -29,7 +29,7 @@ public class AppIntegrationTest {
     public void testGetCountry(){
         Country country = new Country();
         country.setName("Spain");
-
+        country.getName();
         countrylist.add(country);
         rp.printCountry(countrylist);
     }
