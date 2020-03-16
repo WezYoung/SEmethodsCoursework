@@ -68,8 +68,12 @@ public class DataBase
         CitiesLargeToSmall CitiesLtoS = new CitiesLargeToSmall();
 
         //Connect to Database
-        db.connect("localhost:33060");
-
+        if(args.length < 1) {
+            db.connect("localhost:33060");
+        }
+        else{
+            db.connect(args[0]);
+        }
         //Create printer to print out the Report
         ReportPrinter printer = new ReportPrinter();
 
