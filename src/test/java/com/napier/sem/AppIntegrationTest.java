@@ -67,14 +67,36 @@ public class AppIntegrationTest {
         Country country = new Country("GER", "Germany", "Europe", "Central Europe", 0, city);
         assertEquals(country.getCapital(), city);
     }
+
+
+
+    @Test
+    public void testCountryList(){
+        City city = new City("Berlin");
+        Country country = new Country("GER", "Germany", "Europe", "Central Europe", 0, city);
+        countrylist.add(country);
+        assertEquals(countrylist.get(0), country);
+    }
+
+
+    @Test
+    public void testGetCity(){
+        City city = new City("Berlin");
+        Country country = new Country("GER", "Germany", "Europe", "Central Europe", 0, city);
+        countrylist.add(country);
+        assertEquals(countrylist.get(0).getCapital().getName(), "Berlin");
+    }
+
     /*
     @Test
-    public void testGetCountry(){
+    public void testReportPrinter(){
         City city = new City("Amsterdam");
         Country country = new Country("GER", "Germany", "Europe", "Central Europe", 0, city);
         countrylist.add(country);
         rp.printCountry(countrylist);
+        assertEquals();
 
     }
-     */
+    */
+
 }
