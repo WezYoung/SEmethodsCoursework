@@ -8,10 +8,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
+import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CItyAppTest {
+public class CityAppTest {
 
     //Test 1, tests city get name
     @Test
