@@ -13,6 +13,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CityAppTest {
 
+    @Test
+    void unitTest()
+    {
+        assertEquals(5, 5);
+    }
+
     //Test 1, tests city get name
     @Test
     public void testCityReportNameSuccess(){
