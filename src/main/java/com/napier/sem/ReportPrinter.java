@@ -17,9 +17,13 @@ public class ReportPrinter {
 
             //Loop through list
             for (Country country : list) {
+                try {
+                    System.out.format("%-8s%-38s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(),
+                            country.getRegion(), country.getPopulation(), country.getCapital().getName());
+                } catch (Exception ex) {
+                    System.out.println(ex.toString());
+                }
 
-                System.out.format("%-8s%-38s%-20s%-27s%-11d%-35s\n", country.getCode(), country.getName(), country.getContinent(),
-                        country.getRegion(), country.getPopulation(), country.getCapital().getName());
 
             }
         } else {

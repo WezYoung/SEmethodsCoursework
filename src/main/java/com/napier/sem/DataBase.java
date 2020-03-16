@@ -68,8 +68,12 @@ public class DataBase
         CitiesLargeToSmall CitiesLtoS = new CitiesLargeToSmall();
 
         //Connect to Database
-        db.connect();
-
+        if(args.length < 1) {
+            db.connect("localhost:33060");
+        }
+        else{
+            db.connect(args[0]);
+        }
         //Create printer to print out the Report
         ReportPrinter printer = new ReportPrinter();
 
@@ -121,7 +125,7 @@ public class DataBase
     /**
      * This Method connects to the MySQL database.
      */
-    public void connect()
+    public void connect(String location)
     {
         try
         {
@@ -143,7 +147,7 @@ public class DataBase
                 // Wait a bit for db to start
                 Thread.sleep(5000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://" + location + "/employees?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             }
