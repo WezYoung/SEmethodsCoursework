@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CountryLanguageAppTest {
 
 
+    //Test 1, test country language is equal
     @Test
     public void countryLanguageTest(){
         Country country = new Country("Spain");
