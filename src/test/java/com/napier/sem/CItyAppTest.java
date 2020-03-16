@@ -21,11 +21,13 @@ public class CItyAppTest {
     }
 
     //Test 2, tests failure when cities are not equal
+    /*
     @Test
     public void testCityReportNameFail(){
         City city = new City("Madrid");
         assertEquals(city.getName(), "Barcelona");
     }
+    */
 
     //Test 3, tests population get
     @Test
