@@ -67,7 +67,7 @@ public class CitiesLargeToSmall {
     }
 
     //Gets and sorts populations of countries in the world from largest to smallest
-    public List<City> getCitiesLargeToSmallInContinent(Connection con)
+    public List<City> getCitiesLargeToSmallInContinent(Connection con, String continent)
     {
         try{
             //Create SQL Statement
@@ -77,6 +77,7 @@ public class CitiesLargeToSmall {
             String strQuery =
                     "SELECT ci.`Name`, co.`Continent`, co.`Region`, ci.`District`, ci.`Population`, co.`Name` AS 'Country'" +
                             "FROM `city` ci " +
+                            "WHERE ci. `city` = '" + continent + "'" +
                             "JOIN `country` co ON ci.`CountryCode` = co.`Code`" +
                             "ORDER BY `Population` Desc";
 

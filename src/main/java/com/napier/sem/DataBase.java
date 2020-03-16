@@ -100,22 +100,19 @@ public class DataBase
         }
 
 
-/*
-        //Print Report - largest to smallest Countries in region
-        System.out.println("Printing Report: all Countries in a region organised by largest population to smallest.");
-        List<Country> listC = CountryLtoS.getCountriesLargeToSmallInRegion(con);  //List to store returned countries in
-        printer.printCountry(listC);  //Print Report
-
         //Print Report - largest to smallest Cities in world
         System.out.println("Printing Report: all Cities in the world organised by largest population to smallest.");
         List<City> listD = CitiesLtoS.getCitiesLargeToSmallInWorld(con);
         printer.printCity(listD);  //Print Report
 
-        //Print Report - largest to smallest Cities in continent
-        System.out.println("Printing Report: all Cities in a continent organised by largest population to smallest.");
-        List<City> listE = CitiesLtoS.getCitiesLargeToSmallInContinent(con);
-        printer.printCity(listE);  //Print Report
-*/
+        for(String continent : continentList){
+            //Print Report - largest to smallest Cities in continent
+            System.out.println("Printing Report: all Cities in a continent organised by largest population to smallest.");
+            List<City> listE = CitiesLtoS.getCitiesLargeToSmallInContinent(con, continent);
+            printer.printCity(listE);  //Print Report
+        }
+
+
 
         //Disconnect from Database
         db.disconnect();
